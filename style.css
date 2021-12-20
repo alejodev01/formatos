@@ -1,0 +1,100 @@
+#buttonListadoMateriales{
+    text-align: center;
+}
+
+#marco{
+    border-style: solid;
+    font-size: smaller;
+}
+
+#titulo{
+    border-style: ridge;
+    text-align: center;
+    font-size: 12px ;
+    font-weight: bold;
+}
+#labelObservaciones{    
+    font-weight: bold;
+}
+
+#footer{    
+    font-weight: bold;
+    font-size: 10px;
+    border-style: ridge;
+    text-align: center;
+}
+
+#encabezado1{
+    border-style: none;
+    width: 45%;
+    float: left;
+}
+
+#encabezado2{
+    border-style: none;
+    width: 55%;
+    float: right;
+    
+}
+
+#inputselect, #inputTransito, #inputSelectIngreso, #inputSelectEgreso{
+    width: 120px;
+    height: 30px;
+}
+
+#inputDate{
+    width: 216px;
+}
+
+#labelSelect, #label{
+    margin-right: -30px;
+    font-weight: bold;
+}
+
+#labelTransito{
+    margin-right: -40px;
+    font-weight: bold;
+}
+
+#inputCodigo, #inputSolicitada, #inputDespachada{
+    width: 100px;
+    height: 20px;
+    
+}
+
+#inputUbicacion, #inputLote{
+    width: 120px;
+    height: 20px;
+}
+
+#divResultados{    
+    padding: auto;
+}
+
+#buttonIngresar{
+    width: 100px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;    
+    }
+
+#buttonEliminar{
+    background-color: lightgray;
+}
+ 
+    table, th, td, tr{
+        border-style: double;
+        text-align: center;
+        padding: 5px;
+        margin: 0 auto;
+    }
+
+    #resultados{
+        border-style: double;
+    }
+
+   
+

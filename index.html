@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>FC</title>
+</head>
+
+<div id="marco">
+
+    <div id="titulo">
+        <div>CHEC</div>
+        <div>Solicitud de Materiales por Compra o Transferencia</div>
+        <div>FO-AB-02-000-019 Versión 9.0</div>
+    </div>
+    <div id="encabezado1">
+        <div class="row mb-1">
+            <form>
+
+                <div class="row mb-1">
+                    <label id="label" for="inputDate" class="col-sm-5 col-form-label">Fecha de solicitud:</label>
+                    <div class="col-sm-4">
+                        <input type="date" class="form-control form-control-sm" id="inputDate">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <label id="label" for="inputNombre" class="col-sm-5 col-form-label">Nombre del Solicitante:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-sm" id="inputNombre">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <label id="label" for="inputAutoriza" class="col-sm-5 col-form-label">Nombre de quien
+                        autoriza:</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-sm" id="inputAutoriza">
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <label id="label" for="inputMovimiento1" class="col-sm-5 col-form-label">Descripcion JDE 1er.
+                        Mov.</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-sm" id="inputMovimiento1" readonly>
+                    </div>
+                </div>
+                <div class="row mb-1">
+                    <label id="label" for="inputAutoriza" class="col-sm-5 col-form-label">Descripcion JDE Sdo.
+                        Mov.</label>
+                    <div class="col-sm-6">
+                        <input type="text" class="form-control form-control-sm" id="inputMovimiento2" readonly>
+                    </div>
+                </div>
+        </div>
+        </form>
+    </div>
+
+
+    <aside id="encabezado2">
+        <div>
+            <form action="informacion2">
+                <div class="row mb-1">
+                    <label for="inputNombre" id="labelSelect" class="col-sm-4 col-form-label">Unidad de
+                        Negocios:</label>
+                    <select class="form-select form-select-sm" id="inputselect" aria-label=".form-select-sm example">
+                        <option selected></option>
+                        <option value="1">_0231</option>
+                        <option value="2">_0233</option>
+                        <option value="3">_0234</option>
+                        <option value="1">_0298</option>
+                        <option value="2">_31MCYAPY</option>
+                        <option value="3">_33MCIAPY</option>
+                        <option value="3">_33MCYAPY</option>
+                    </select>
+                    <label for="inputNombre" class="col-sm-4 col-form-label">(solo para compras)</label>
+                </div>
+
+
+
+
+                <div class="row mb-1">
+                    <label for="inputNombre" id="labelSelect" class="col-sm-4 col-form-label">Bodega Egreso:</label>
+                    <select class="form-select form-select-sm" id="inputSelectEgreso"
+                        aria-label=".form-select-sm example">
+                        <option selected></option>
+                        <option value="1">_C001</option>
+                        <option value="2">_C011</option>
+                        <option value="3">_C012</option>
+                        <option value="4">_C100</option>
+                        <option value="5">_C102</option>
+                        <option value="6">_C300</option>
+                        <option value="7">_C304</option>
+                        <option value="8">_C306</option>
+                        <option value="9">_C600</option>
+                        <option value="10">_C109</option>
+                        <option value="11">_B005</option>
+                        <option value="12">_C301</option>
+                        <option value="13">_C601</option>
+                        <option value="14">OTRO</option>
+                    </select>
+                    <label for="inputNombre" class="col-sm-1 col-form-label">Ref:</label>
+                    <div class="col-sm-4">
+                        <select class="form-select form-select-sm" id="selectRefEgreso"
+                            aria-label=".form-select-sm example">
+                            <option selected></option>
+
+                        </select>
+                    </div>
+                </div>
+
+                <div class="row mb-1">
+                    <label for="labelSelect" id="labelSelect" class="col-sm-4 col-form-label">Bodega Ingreso:</label>
+                    <select class="form-select form-select-sm" id="inputSelectIngreso"
+                        aria-label=".form-select-sm example">
+                        <option selected></option>
+                        <option value="1">_B005</option>
+                        <option value="2">B002</option>
+                        <option value="3">B003</option>
+                        <option value="4">B004</option>
+                        <option value="5">B101</option>
+                        <option value="6">B102</option>
+                        <option value="7">B103</option>
+                        <option value="8">B104</option>
+                        <option value="9">_C001</option>
+                        <option value="10">_C011</option>
+                        <option value="11">_C012</option>
+                        <option value="12">C006</option>
+                        <option value="13">C007</option>
+                        <option value="14">C008</option>
+                        <option value="15">C010</option>
+                        <option value="16">C014</option>
+                        <option value="37">C015</option>
+                        <option value="17">C016</option>
+                        <option value="49">_C100</option>
+                        <option value="141">_C102</option>
+                        <option value="51">C104</option>
+                        <option value="52">C105</option>
+                        <option value="53">C106</option>
+                        <option value="54">C107</option>
+                        <option value="55">C108</option>
+                        <option value="50">_C109</option>
+                        <option value="56">C110</option>
+                        <option value="57">C111</option>
+                        <option value="58">C204</option>
+                        <option value="59">C205</option>
+                        <option value="60">C206</option>
+                        <option value="61">C208</option>
+                        <option value="62">C209</option>
+                        <option value="63">C210</option>
+                        <option value="64">C211</option>
+                        <option value="65">_C300</option>
+                        <option value="66">_C301</option>
+                        <option value="67">_C304</option>
+                        <option value="68">_C306</option>
+                        <option value="35">_C600</option>
+                        <option value="36">_C601</option>
+                        <option value="38">C602</option>
+                        <option value="18">T124</option>
+                        <option value="19">T125</option>
+                        <option value="20">T126</option>
+                        <option value="21">T127</option>
+                        <option value="22">T128</option>
+                        <option value="39">T150</option>
+                        <option value="40">T151</option>
+                        <option value="41">T155</option>
+                        <option value="42">T158</option>
+                        <option value="69">T164</option>
+                        <option value="70">T165</option>
+                        <option value="71">T166</option>
+                        <option value="72">T167</option>
+                        <option value="73">T168</option>
+                        <option value="74">T169</option>
+                        <option value="75">T170</option>
+                        <option value="76">T173</option>
+                        <option value="77">T174</option>
+                        <option value="78">T181</option>
+                        <option value="79">T183</option>
+                        <option value="43">T184</option>
+                        <option value="44">T185</option>
+                        <option value="80">T186</option>
+                        <option value="45">T187</option>
+                        <option value="81">T188</option>
+                        <option value="46">T190</option>
+                        <option value="82">T191</option>
+                        <option value="47">T192</option>
+                        <option value="83">T193</option>
+                        <option value="48">T194</option>
+                        <option value="84">T195</option>
+                        <option value="85">T196</option>
+                        <option value="23">T246</option>
+                        <option value="24">T247</option>
+                        <option value="25">T250</option>
+                        <option value="26">T251</option>
+                        <option value="27">T255</option>
+                        <option value="28">T258</option>
+                        <option value="29">T259</option>
+                        <option value="30">T260</option>
+                        <option value="31">T261</option>
+                        <option value="32">T262</option>
+                        <option value="33">T263</option>
+                        <option value="34">T294</option>
+                        <option value="86">G400</option>
+                        <option value="87">H600</option>
+                        <option value="88">H601</option>
+                        <option value="89">H602</option>
+                        <option value="90">H603</option>
+                        <option value="91">H604</option>
+                        <option value="92">H605</option>
+                        <option value="93">H606</option>
+                        <option value="94">H607</option>
+                        <option value="95">H608</option>
+                        <option value="96">H609</option>
+                        <option value="97">H610</option>
+                        <option value="98">H611</option>
+                        <option value="99">H612</option>
+                        <option value="100">H613</option>
+                        <option value="101">H614</option>
+                        <option value="102">H615</option>
+                        <option value="103">H616</option>
+                        <option value="104">H617</option>
+                        <option value="105">H618</option>
+                        <option value="106">H619</option>
+                        <option value="107">H620</option>
+                        <option value="108">H621</option>
+                        <option value="109">H622</option>
+                        <option value="110">H623</option>
+                        <option value="111">H624</option>
+                        <option value="112">H625</option>
+                        <option value="113">H626</option>
+                        <option value="114">H627</option>
+                        <option value="115">H628</option>
+                        <option value="116">H629</option>
+                        <option value="117">H630</option>
+                        <option value="118">H631</option>
+                        <option value="119">H632</option>
+                        <option value="120">H633</option>
+                        <option value="121">H634</option>
+                        <option value="122">H635</option>
+                        <option value="123">H636</option>
+                        <option value="124">H637</option>
+                        <option value="125">H638</option>
+                        <option value="126">H639</option>
+                        <option value="127">T101</option>
+                        <option value="128">T102</option>
+                        <option value="129">T103</option>
+                        <option value="130">T104</option>
+                        <option value="131">T105</option>
+                        <option value="132">T203</option>
+                        <option value="133">T204</option>
+                        <option value="134">T205</option>
+                        <option value="135">T206</option>
+                        <option value="136">T221</option>
+                        <option value="137">T222</option>
+                        <option value="138">T223</option>
+                        <option value="139">T224</option>
+                        <option value="140">T225</option>
+                    </select>
+
+                    <label for="labelRef" class="col-sm-1 col-form-label">Ref:</label>
+                    <div class="col-sm-4">
+                        <select class="form-select form-select-sm" id="selectRefIngreso"
+                            aria-label=".form-select-sm example">
+                            <option selected></option>
+                        </select>
+                    </div>
+                </div>
+
+
+                <div class="row mb-1">
+                    <label for="inputTransito" id="labelTransito" class="col-sm-4 col-form-label">Bodega
+                        Transito:</label>
+                    <div class="col-sm-2">
+                        <input type="text" class="form-control form-control-sm" id="inputTransito" readonly>
+                    </div>
+                </div>
+
+
+
+            </form>
+        </div>
+    </aside>
+
+    <body>
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" id="buttonListadoMateriales" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        Listado de Materiales
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        <div id="divRegistros">
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Codigo JDE</th>
+                                        <th scope="col">Cantidad Solicitada</th>
+                                        <th scope="col">Cantidad Despachada</th>
+                                        <th scope="col">Cuenta Objeto</th>
+                                        <th scope="col">Referencia</th>
+                                    </tr>
+                                </thead>
+
+                                <tr>
+                                    <td><input type="number" class="form-control form-control-sm" id="inputCodigo"
+                                            required></td>
+                                    <td><input type="number" class="form-control form-control-sm" id="inputSolicitada"
+                                            required></td>
+                                    <td><input type="number" class="form-control form-control-sm" id="inputDespachada">
+                                    </td>
+                                    <td><input type="text" class="form-control form-control-sm" id="inputCuenta"></td>
+                                    <td><input type="text" class="form-control form-control-sm" id="inputReferencia">
+                                    </td>
+                                    <td scope="col" rowspan="2" id="thButton"><button type="button" id="buttonInsertar"
+                                            class="btn btn-outline-dark">Ingresar</button></td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="divResultados">
+                <table class="table" id="tableResultados">
+                    <thead>
+                        <tr>
+                            <th>Codigo JDE</th>
+                            <th>Descripcion del Articulo</th>
+                            <th>UM</th>
+                            <th>Cantidad Solicitada</th>
+                            <th>* Cantidad Entregada</th>
+                            <th>Cuenta Objeto</th>
+                            <th>Referencia</th>
+                            <th>X</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+
+
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="items">
+
+            </div>
+
+            <div class="mb-3 row">
+                <label for="labelObservaciones" id="labelObservaciones" class="col-sm-2 col-form-label">OBSERVACIONES
+                    GENERALES
+                    JUSTIFICACION</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+            </div>
+            <div id="footer">
+                <h10>Los campos marcados con * se diligenciarán por el equipo de trabajo almacenes. / El formato debe
+                    estar
+                    completamente diligenciado o será devuelto al solicitante.</h10>
+            </div>
+
+        </div>
+        <script src="scripts/logica.js" type="module"></script>
+        <script src="data/data.js" type="module"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+    </body>
+
+</html>
