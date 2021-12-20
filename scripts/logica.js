@@ -370,7 +370,7 @@ function obtenerTransito() {
     if (bodegaIngreso >= 1 && bodegaIngreso <= 4) {
         document.getElementById('inputTransito').value = "B091";
     }
-    if (bodegaIngreso >= 5 && bodegaIngreso <= 8) {
+    else if (bodegaIngreso >= 5 && bodegaIngreso <= 8) {
         document.getElementById('inputTransito').value = "B191";
     }
     else if (bodegaIngreso >= 9 && bodegaIngreso <= 34) {
