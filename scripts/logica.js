@@ -13,7 +13,7 @@ inputSelectEgreso.addEventListener('change', obtenerRefEgreso);
 selectRefEgreso.addEventListener('change', obtenerMovimiento1);
 selectRefIngreso.addEventListener('change', obtenerMovimiento2);
 
-function obtenerRefIngreso(){
+function obtenerRefIngreso() {
     let bodegaIngreso = document.getElementById('inputSelectIngreso').value;
     let refIngreso = document.getElementById('selectRefIngreso');
 
@@ -23,7 +23,7 @@ function obtenerRefIngreso(){
     }
     if (bodegaIngreso == 1) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
-        refIngreso.insertAdjacentHTML("beforeend", "<option>MTTO TERMODORADA</option>");        
+        refIngreso.insertAdjacentHTML("beforeend", "<option>MTTO TERMODORADA</option>");
     }
     else if (bodegaIngreso == 9) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
@@ -60,7 +60,7 @@ function obtenerRefIngreso(){
     }
     else if (bodegaIngreso == 36) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
-        refIngreso.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");        
+        refIngreso.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");
     }
     else if (bodegaIngreso == 49) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
@@ -72,11 +72,11 @@ function obtenerRefIngreso(){
     }
     else if (bodegaIngreso == 141) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
-        refIngreso.insertAdjacentHTML("beforeend", "<option>REPARADOS REDES</option>");        
+        refIngreso.insertAdjacentHTML("beforeend", "<option>REPARADOS REDES</option>");
     }
     else if (bodegaIngreso == 50) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
-        refIngreso.insertAdjacentHTML("beforeend", "<option>ARE SYL CHINCHINA</option>");        
+        refIngreso.insertAdjacentHTML("beforeend", "<option>ARE SYL CHINCHINA</option>");
     }
     else if (bodegaIngreso == 65) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
@@ -88,7 +88,7 @@ function obtenerRefIngreso(){
     }
     else if (bodegaIngreso == 66) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
-        refIngreso.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");        
+        refIngreso.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");
     }
     else if (bodegaIngreso == 67) {
         refIngreso.insertAdjacentHTML("beforeend", "<option selected></option>");
@@ -343,20 +343,20 @@ function obtenerRefEgreso() {
     }
 }
 
-function obtenerMovimiento1(){
+function obtenerMovimiento1() {
     let bodegaEgreso = document.getElementById('inputSelectEgreso');
     let bodegaEgresoSeleccionada = bodegaEgreso.options[bodegaEgreso.selectedIndex].text;
     let refEgreso = document.getElementById('selectRefEgreso').value;
     let resultado = (bodegaEgresoSeleccionada + " | " + refEgreso);
-    document.getElementById('inputMovimiento1').value = resultado;           
+    document.getElementById('inputMovimiento1').value = resultado;
 }
 
-function obtenerMovimiento2(){
+function obtenerMovimiento2() {
     let bodegaIngreso = document.getElementById('inputSelectIngreso');
     let bodegaIngresoSeleccionada = bodegaIngreso.options[bodegaIngreso.selectedIndex].text;
     let refIngreso = document.getElementById('selectRefIngreso').value;
     let resultado = (bodegaIngresoSeleccionada + " | " + refIngreso);
-    document.getElementById('inputMovimiento2').value = resultado;           
+    document.getElementById('inputMovimiento2').value = resultado;
 }
 
 
@@ -367,7 +367,7 @@ function obtenerMovimiento2(){
 function obtenerTransito() {
     let bodegaIngreso = document.getElementById('inputSelectIngreso').value;
 
-    if (bodegaIngreso >= 1 && bodegaIngreso <= 4) {
+    if (bodegaIngreso > 0 && bodegaIngreso <= 4) {
         document.getElementById('inputTransito').value = "B091";
     }
     else if (bodegaIngreso >= 5 && bodegaIngreso <= 8) {
