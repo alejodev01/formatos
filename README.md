@@ -1,1 +1,1 @@
-# formatos
+Este proyecto tiene como finalidad reemplazar un formato en excel el cual constantemente es mal diligenciado, por lo cual este formato web es muy facil de diligenciar, adicionalmente maneja una data que evita ingresar codigos incorrectos.
