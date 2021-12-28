@@ -5,6 +5,8 @@ let inputSelectEgreso = document.getElementById('inputSelectEgreso');
 let selectRefIngreso = document.getElementById('selectRefIngreso');
 let inputSelectIngreso = document.getElementById('inputSelectIngreso');
 let buttonInsertar = document.getElementById('buttonInsertar');
+let selectRefPedido = document.getElementById('selectRefPedido');
+let selectUnidadNegocios = document.getElementById('selectUnidadNegocios');
 buttonInsertar.addEventListener('click', guardarRegistro);
 buttonInsertar.addEventListener('click', limpiar);
 inputSelectIngreso.addEventListener('change', obtenerTransito);
@@ -12,6 +14,170 @@ inputSelectIngreso.addEventListener('change', obtenerRefIngreso);
 inputSelectEgreso.addEventListener('change', obtenerRefEgreso);
 selectRefEgreso.addEventListener('change', obtenerMovimiento1);
 selectRefIngreso.addEventListener('change', obtenerMovimiento2);
+inputSelectIngreso.addEventListener('change', obtenerRefPedido);
+selectUnidadNegocios.addEventListener('change', obtenerCuentaObjeto);
+
+function obtenerCuentaObjeto() {
+    let selectUnidadNegocios = document.getElementById('selectUnidadNegocios').value;
+    let selectCuentaPedido = document.getElementById('selectCuentaPedido');
+
+    let length = selectCuentaPedido.options.length;
+    for (let i = length - 1; i >= 0; i--){  //elimina las opciones del select
+        selectCuentaPedido.options[i] = null;          
+    }
+    if (selectUnidadNegocios == 1) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151807</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151808</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163501</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163503</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163504</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163507</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163590</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>167504</option>");
+    }
+    else if (selectUnidadNegocios == 2) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151032</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151090</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151807</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151808</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151890</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163501</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163504</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163507</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163590</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>164501</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>164512</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>165002</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>165511</option>");        
+    }
+    else if (selectUnidadNegocios == 3) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151032</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151090</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163501</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163504</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163507</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163590</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>167002</option>");        
+    }
+    else if (selectUnidadNegocios == 4) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>151890</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163501</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163503</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163504</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163507</option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>163590</option>");                
+    }
+    else if (selectUnidadNegocios == 5) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>161504</option>");
+    }
+    else if (selectUnidadNegocios == 6) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>161505</option>");
+    } 
+    else if (selectUnidadNegocios == 7) {
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectCuentaPedido.insertAdjacentHTML("beforeend", "<option>161504</option>");
+    }     
+}
+
+
+function obtenerRefPedido() {
+    let bodegaIngreso = document.getElementById('inputSelectIngreso').value;
+    let selectRefPedido = document.getElementById('selectRefPedido');
+
+    let length = selectRefPedido.options.length;
+    for (let i = length - 1; i >= 0; i--) { //elimina las opciones del select
+        selectRefPedido.options[i] = null;
+    }
+    if (bodegaIngreso == 1) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO TERMODORADA</option>");
+    }
+    else if (bodegaIngreso == 9) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MANTENIENTO REDES</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PERDIDAS COSTO</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>ALUMBRADO PUBLICO</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO GENERACION</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO SYL</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO OPERACION Y CALIDAD</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO GESTION INMOBILIARIA</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO ALUMBRADO PUBLICO</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>GESTION MEDIDA DISTRIBUCION</option>");
+    }
+    else if (bodegaIngreso == 10) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO POSTES GENERACION</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO POSTES REDES</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO POSTES SYL</option>");
+    }
+    else if (bodegaIngreso == 11) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO MARMATO REDES</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO MARMATO SYL</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>MTTO MARMATO ALUMBRADO</option>");
+    }
+    else if (bodegaIngreso == 35) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>CLIENTES VENTA</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>CLIENTES TT</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PERDIDAS VENTA</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>COMERCIAL VENTA</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>GESTION MEDIDA DISTRIBUCION</option>");
+    }
+    else if (bodegaIngreso == 36) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");
+    }
+    else if (bodegaIngreso == 49) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-08-12-003 REDES</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>ARE GENERACION</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>ARE SYL</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>ARE OPERACIÓN Y CALIDAD</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>ARE APOYO</option>");
+    }
+    else if (bodegaIngreso == 141) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>REPARADOS REDES</option>");
+    }
+    else if (bodegaIngreso == 50) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>ARE SYL CHINCHINA</option>");
+    }
+    else if (bodegaIngreso == 65) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-03-11-004 EXP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-08-12-002 REP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-04-14-001 PER EXP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-04-14-001 PER REP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>INVERSION SYL</option>");
+    }
+    else if (bodegaIngreso == 66) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>LABORATORIOS DISTRIBUCION</option>");
+    }
+    else if (bodegaIngreso == 67) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>INVERSION POSTES SYL</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-03-11-004 EXP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-04-14-001 PER EXP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-04-14-001 PER REP</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>PT-DI-08-12-002 REP</option>");
+    }
+    else if (bodegaIngreso == 68) {
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option selected></option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>INVERSION PROYECTOS</option>");
+        selectRefPedido.insertAdjacentHTML("beforeend", "<option>INVERSION PROYECTOS SYL</option>");
+    }
+}
+
 
 function obtenerRefIngreso() {
     let bodegaIngreso = document.getElementById('inputSelectIngreso').value;
@@ -408,8 +574,8 @@ function guardarRegistro() {
     let cod = document.getElementById('inputCodigo').value,
         solicitada = document.getElementById('inputSolicitada').value,
         despachada = document.getElementById('inputDespachada').value,
-        cuenta = document.getElementById('inputCuenta').value,
-        referencia = document.getElementById('inputReferencia').value;
+        cuenta = document.getElementById('selectCuentaPedido').value,
+        referencia = document.getElementById('selectRefPedido').value;
 
     data.forEach(articulo => {
         const { codigo, descripcion, unidad_medida } = articulo;
@@ -484,6 +650,6 @@ function limpiar() {
     document.getElementById('inputCodigo').value = "";
     document.getElementById('inputSolicitada').value = "";
     document.getElementById('inputDespachada').value = "";
-    document.getElementById('inputCuenta').value = "";
-    document.getElementById('inputReferencia').value = "";
+    document.getElementById('selectCuentaPedido').value = "";
+    document.getElementById('selectRefPedido').value = "";
 }

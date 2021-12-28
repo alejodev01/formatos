@@ -1,5 +1,30 @@
+
+
+
+
+#inputNombre, #inputAutoriza, #inputMovimiento1, #inputMovimiento2{
+    width: 280px;
+    margin-right: -5%;
+}
+
+#selectRefEgreso, #selectRefIngreso{
+    width: 210px;
+}
+
+#radio, #labelDocumento {
+    margin-left: 80px;
+  }
+
+#formulario, #legalizacion{
+    background-color: aqua;
+    padding: 10px;
+    margin: auto;
+}
+
 #buttonListadoMateriales{
     text-align: center;
+    align-items: center;
+    justify-content: center;
 }
 
 #marco{
@@ -10,10 +35,10 @@
 #titulo{
     border-style: ridge;
     text-align: center;
-    font-size: 12px ;
+    font-size: 11px ;
     font-weight: bold;
 }
-#labelObservaciones{    
+#labelObservaciones, #labelRef{    
     font-weight: bold;
 }
 
@@ -25,19 +50,27 @@
 }
 
 #encabezado1{
-    border-style: none;
-    width: 45%;
+    border-style:none;
+    width: 48%;
     float: left;
+    padding-left:2%;    
+    padding-top: 0.5%;    
 }
 
 #encabezado2{
     border-style: none;
-    width: 55%;
+    width: 52%;
     float: right;
-    
+    padding-top: 0.5%;
 }
 
-#inputselect, #inputTransito, #inputSelectIngreso, #inputSelectEgreso{
+#divObservaciones, #divResultados{
+    padding-right: 2%;
+    padding-left: 2%;
+    padding-top: 0.5%;
+}
+
+#selectUnidadNegocios, #inputTransito, #inputSelectIngreso, #inputSelectEgreso{
     width: 120px;
     height: 30px;
 }
@@ -46,29 +79,31 @@
     width: 216px;
 }
 
-#labelSelect, #label{
+#labelSelect{
+    margin-right: -50px;
+    font-weight: bold;
+}
+
+#label{
     margin-right: -30px;
     font-weight: bold;
 }
 
 #labelTransito{
-    margin-right: -40px;
+    margin-right: -60px;
     font-weight: bold;
 }
 
 #inputCodigo, #inputSolicitada, #inputDespachada{
-    width: 100px;
-    height: 20px;
-    
-}
-
-#inputUbicacion, #inputLote{
     width: 120px;
-    height: 20px;
-}
+    margin-left: 20%;
+    }
 
-#divResultados{    
+#divResultados, #divRegistros{    
     padding: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #buttonIngresar{
@@ -88,13 +123,23 @@
     table, th, td, tr{
         border-style: double;
         text-align: center;
-        padding: 5px;
-        margin: 0 auto;
+        padding: auto;
+        margin: auto;
+        align-items: center;
+        align-items: middle;
+        
     }
 
     #resultados{
         border-style: double;
     }
+
+    #buttonImprimir{
+        align-items: center;
+        margin-left: 25%;
+        margin-top: 7%;
+    }
+    
 
    
 
